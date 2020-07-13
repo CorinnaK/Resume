@@ -1,0 +1,37 @@
+body {
+    /* background-image: url("../images/lago-di-limides-3025780_1920.jpg"); */
+    /* background-image: url("../images/banner-958941_1920.jpg"); */
+    /* background-image: url("../images/forest-4412721_1920.jpg"); */
+    background-image: url("../images/landscape-1115428_1920.jpg");
+    /* background-image: url("../images/sun-5294496_1920.jpg"); */
+    /* background-image: url("../images/tree-3856808_1920.jpg"); */
+    /* background-image: url("../images/yin-yang-4401011_1280.png"); */
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat; 
+}
+
+header {
+    font-size: 6rem;
+    font-weight: bold;
+    /* text-shadow: 0 0 6px rgb(255, 228, 20); */
+    text-shadow: 0 0 2px black;
+    color: cornsilk;
+    text-align: center;
+    padding-top: 50px;
+}
+main {
+  margin-top: 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(255, 248, 220);
+    text-shadow: 0 0 5px black;
+    width: auto;
+}
+section {
+    background: rgba(255, 248, 220, 0.3);
+    width: auto;
+}
+h2 {
+    font-size: 2rem;
+}
