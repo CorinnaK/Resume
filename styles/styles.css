@@ -1,37 +1,44 @@
 body {
     /* background-image: url("../images/lago-di-limides-3025780_1920.jpg"); */
-    /* background-image: url("../images/banner-958941_1920.jpg"); */
-    /* background-image: url("../images/forest-4412721_1920.jpg"); */
-    background-image: url("../images/landscape-1115428_1920.jpg");
+    background-image: url("../images/forest-4412721_1920.jpg");
+
+    /* https://pixabay.com/users/dannymoore1973-1813225/  */
+    /* background-image: url("../images/landscape-1115428_1920.jpg"); */
+
     /* background-image: url("../images/sun-5294496_1920.jpg"); */
-    /* background-image: url("../images/tree-3856808_1920.jpg"); */
-    /* background-image: url("../images/yin-yang-4401011_1280.png"); */
+    background-image: url("../images/tree-3856808_1920.jpg");
+                                                                     /* background-image: url("../images/yin-yang-4401011_1280.png"); ----- can be logo or such */
     background-size: cover;
     /* background-position: center; */
     background-repeat: no-repeat; 
 }
 
 header {
-    font-size: 6rem;
+    font-size: 10vw;
     font-weight: bold;
     /* text-shadow: 0 0 6px rgb(255, 228, 20); */
-    text-shadow: 0 0 2px black;
-    color: cornsilk;
-    text-align: center;
+    /* text-shadow: 0 0 2px black;
+    color: cornsilk; */
+    text-align: left;
     padding-top: 50px;
+    color: black;
+    /* color: rgb(255, 248, 220); */
+    text-shadow: 0 0 5px rgb(243, 189, 13);
 }
 main {
   margin-top: 100px;
-    font-size: 1.2rem;
+    font-size: 2.5vw;
     font-weight: bold;
-    color: rgb(255, 248, 220);
-    text-shadow: 0 0 5px black;
+    color: black;
+    /* color: rgb(255, 248, 220); */
+    text-shadow: 0 0 3px rgb(243, 189, 13);
     width: auto;
 }
 section {
-    background: rgba(255, 248, 220, 0.3);
+    background: rgba(255, 248, 220, 0.8);
     width: auto;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 5vw;
+    text-shadow: 0 0 5px rgb(243, 189, 13);
 }
