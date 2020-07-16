@@ -1,6 +1,6 @@
-* {
+html {
     box-sizing: border-box;
-
+    font-size: 3.2vw;
 }
 body {
     color: rgb(200, 200, 200);
@@ -12,7 +12,7 @@ body {
     https://thirtyeightvisuals.com/blog/half-background-squarespace-index
     This code block uses the linear gradient option in the background to set a change in the background color (direction, color-1  size, color-2 size)  the size could be omitted and the color would gradually change.
     I wanted an abrupt change so I set the size at 50% */
-    background: linear-gradient(180deg, rgb(55, 55, 55) 50%, rgb(100, 100, 100) 50%);
+    background: linear-gradient(180deg, #373737 50%, rgb(100, 100, 100) 50%);
     /* Citation ends */
     background-repeat: no-repeat;
     font-family: Helvetica, sans-serif;
@@ -25,13 +25,14 @@ header {
     justify-content: space-around; 
 }
 header>*{
-    margin:20px 6% 0 6%;
+    margin:20px 5% 0 5%;
 }
 main {
     background-color: rgb(240, 240, 240);
     color: rgb(55, 55, 55);
     width: 90%;
     margin-top: 20px ;
+   
     
 }
 
@@ -43,30 +44,34 @@ section {
     flex-direction: column;
     
 }
-header h2:first-of-type {
+header h2 {
     border-bottom: 1px solid #86c232 ;
     padding-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 /* Typography */
 h1 {
-    font-size: 8vw;
+    font-size: 2.75rem;
     font-weight: bold;
     font-family: Georgia, Times, serif;
 }
 h2 {
-    font-size: 4.5vw;
+    font-size: 1.3rem;
     text-transform: uppercase;
     font-family: Georgia, Times, serif;
 }
 h3 {
-    font-size: 3.5vw;
-    font-weight: bold;
+    font-size: 1.2rem;
+
     padding-bottom: 0.5vw;
     font-family: Georgia, Times, serif;
+}
+main h3 {
+
+    font-weight: bold;
     border-bottom: 1px solid #86c232;
     margin-bottom: 1vw;
-
 }
 header p {
     text-align: justify;
@@ -80,15 +85,15 @@ button {
 
 }
 p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vw;
+    font-family:  Helvetica, sans-serif;
+    font-size: 1rem;
     line-height: 4vw;
    
 }
 main h2 {
     font-weight: bold;
-    width: 33%;
-    margin: 0 1%;
+    width: 37%;
+    padding-left: 1%;
     background-color: #86c232;
     padding-bottom: 0;
 }
@@ -100,55 +105,85 @@ main h2 {
     width: 95%;
 }
 #skills ul ul li{
-    font-size: 3vw;
+    font-size: 1rem;
     width: 50%;
     margin-bottom: 1.5vw;
     /* indent the second line when skill is two lines long */
     /* padding-left: 6px;
     text-indent: -6px; */
 }
+#skills ul li:last-of-type ul li{
+    line-height: 1.2rem;
+    
+}
+/* Sets the spacing between the lists */
 section ul li p:last-of-type{
     margin-bottom: 3vw;
-    font-size: 2.7vw;
+    font-size: .8rem;
 }
 section ul li:nth-of-type(2n){
     margin-bottom: 3vw;
-    font-size: 2.7vw;
 }
 a {
-    font-size: 1.8vw;
+    font-size: .5rem;
 }
 
 ul {
     margin-right: 8%;
-    margin-left: 35%;
-    width: 65%
+    margin-left: 38%;
+    width: 62%
 }
-
-/* @media (min-width: 1000px){
-
-    header {
-        height: 25%;
+/* .desktop {
+    display: none;
+} */
+@media (min-width:600px) and (max-width: 991px){
+    html {
+        font-size: 2.8vw;
+    }
+    #skills ul ul li{
+        /* margin-right: 2px; */
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 992px){
+    html{
+        font-size: 16px;
+        background-color: #f0f0f0;
+    }
+    /* .desktop {
+        display: unset;
+    }
+    .mobile {
+        display: none;
+    } */
+    body {
+        max-width: 1250px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 2% auto;
+        border: 4px solid #373737;
     }
     main {
-        height: 65%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        min-height: 600px;
     }
-    footer {
-        height: 10%;
+    section {
+        width: 33%;
+       
     }
-    h1 {
-        font-size: 4vw;
-    }
-    h2 {
-        font-size: 3vw;
-    }
-    h3 {
-        font-size: 2vw;
+    section ul {
+        margin: 1%;
     }
     p {
-        font-size: 1vw;
+        line-height: 1rem;
     }
-    #date {
-        font-size: .75vw;
+    section h2{
+        width: 62%
     }
-} */
+    header p {
+        text-align: center;
+    }
+}

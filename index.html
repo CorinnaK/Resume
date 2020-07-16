@@ -8,14 +8,16 @@
     <meta name="description" content="Corinna Kelly">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <!-- <script src="js/scripts.js"  defer></script>     -->
+    <link rel="stylesheet" href="styles/formStyles.css">
+    <script src="js/scripts.js"  defer></script>    
 </head>
 
 <body>
+    
     <header>
         <h1>CORINNA KELLY</h1>
         <h2> SOFTWARE DEVELOPER</h2>
-        <h2>PROFILE SUMMARY</h2>
+        <h3>PROFILE SUMMARY</h3>
         <p> Currently undergoing a career shift to software development. With over a decade experience as a manager in the security industry I bring with me demonstrated skills in team leadership, conflict management, and effective investigative skills. Attention to detail and steadfast determination are among my top stregths.
         </p>
     </header>
@@ -24,10 +26,11 @@
             <h2>Education</h2>
             <ul>
                 <li>
-                    <h3>UAlberta Tech Center</h3>
+                    <h3 class="mobile">UofA Tech Center</h3>
+                    <!-- <h3 class="desktop">University of Alberta Tech Center</h3> -->
                     <p>TechCareers Full Stack </p>
                     <p>Application Developer</p>
-                    <p id="date">Jun - Oct 2020</p>
+                    <p id="date">Jun 2020 - Oct 2020</p>
                 </li>
                 <li>
                     <h3>Grant MacEwan</h3>
@@ -43,8 +46,6 @@
                 <li>
                     <h3>Technical <a href="#">(more...)</a></h3>
                     <!-- <button>(more...)</button> -->
-                </li>
-                <li>
                     <ul>
                         <li>HTML/CSS</li>
                         <li>Python</li>
@@ -62,15 +63,11 @@
                 </li>
                 <li>
                     <h3>Professional</h3>
-                </li>
-                <li>
                     <ul>
                         <li>Conflict Management</li>
                         <li>Incident Investigation</li>
                         <li>Access Control Systems</li>
                         <li>Policy/Procedure Writing</li>
-                        
-
                     </ul>
                 </li>
             </ul>
@@ -90,11 +87,31 @@
                 </li>
             </ul>
         </section>
+        <section id="modal">
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Your Name Here">
+            <label for="Company">Company: </label>
+            <input type="text" name="company" id="company" placeholder="Company Name">
+            <label for="email">Email Address: </label>
+            <input type="email" name="email" id="email" placeholder="someone@somecompany.com">
+            <label for="subject">Subject: </label>
+            <input type="text" name="subject" id="subject">
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div>
+                <button class="formBtn" id="clear">Clear</button>
+                <button class="formBtn" id="submit">Submit</button>
+                <button class="formBtn" id="cancel">Cancel</button>
+            </div>
+
+        </form>
+        </section>
     </main>
     <footer>
         <nav>
             <ul>
-                <li><button id="contact">Contact Me</button></li>
+                <li><button calss="mainBtn" id="contact">Contact Me</button></li>
                 <li></li>
                 <li></li>
             </ul>

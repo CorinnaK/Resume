@@ -1,0 +1,36 @@
+
+#modal {
+    display:none;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(150, 150, 150, .7);
+}
+form {
+
+    left: 25%;
+    top: 25%;
+    height: 50%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #444444;
+    color: #F0f0f0;
+    padding: 2% 1%;
+    border-radius: 10%;
+    margin: auto;
+    /* margin: 20px 0 0 50px; */
+}
+.formBtn {
+    width: 80px;
+    border: 1px solid #000;
+    background-color: #86c232;
+    height: 40px;
+    border-radius: 25%;
+ 
+}
