@@ -1,44 +1,154 @@
-body {
-    /* background-image: url("../images/lago-di-limides-3025780_1920.jpg"); */
-    background-image: url("../images/forest-4412721_1920.jpg");
+* {
+    box-sizing: border-box;
 
-    /* https://pixabay.com/users/dannymoore1973-1813225/  */
-    /* background-image: url("../images/landscape-1115428_1920.jpg"); */
-
-    /* background-image: url("../images/sun-5294496_1920.jpg"); */
-    background-image: url("../images/tree-3856808_1920.jpg");
-                                                                     /* background-image: url("../images/yin-yang-4401011_1280.png"); ----- can be logo or such */
-    background-size: cover;
-    /* background-position: center; */
-    background-repeat: no-repeat; 
 }
-
+body {
+    color: rgb(200, 200, 200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* Citation starts 
+    https://thirtyeightvisuals.com/blog/half-background-squarespace-index
+    This code block uses the linear gradient option in the background to set a change in the background color (direction, color-1  size, color-2 size)  the size could be omitted and the color would gradually change.
+    I wanted an abrupt change so I set the size at 50% */
+    background: linear-gradient(180deg, rgb(55, 55, 55) 50%, rgb(100, 100, 100) 50%);
+    /* Citation ends */
+    background-repeat: no-repeat;
+    font-family: Helvetica, sans-serif;
+}
 header {
-    font-size: 10vw;
-    font-weight: bold;
-    /* text-shadow: 0 0 6px rgb(255, 228, 20); */
-    /* text-shadow: 0 0 2px black;
-    color: cornsilk; */
-    text-align: left;
-    padding-top: 50px;
-    color: black;
-    /* color: rgb(255, 248, 220); */
-    text-shadow: 0 0 5px rgb(243, 189, 13);
+    text-align: center;
+    /* height: 25%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+header>*{
+    margin:20px 6% 0 6%;
 }
 main {
-  margin-top: 100px;
-    font-size: 2.5vw;
-    font-weight: bold;
-    color: black;
-    /* color: rgb(255, 248, 220); */
-    text-shadow: 0 0 3px rgb(243, 189, 13);
-    width: auto;
+    background-color: rgb(240, 240, 240);
+    color: rgb(55, 55, 55);
+    width: 90%;
+    margin-top: 20px ;
+    
+}
+
+footer {
+    margin: 20px;
 }
 section {
-    background: rgba(255, 248, 220, 0.8);
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+header h2:first-of-type {
+    border-bottom: 1px solid #86c232 ;
+    padding-bottom: 20px;
+}
+
+/* Typography */
+h1 {
+    font-size: 8vw;
+    font-weight: bold;
+    font-family: Georgia, Times, serif;
 }
 h2 {
-    font-size: 5vw;
-    text-shadow: 0 0 5px rgb(243, 189, 13);
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    font-family: Georgia, Times, serif;
 }
+h3 {
+    font-size: 3.5vw;
+    font-weight: bold;
+    padding-bottom: 0.5vw;
+    font-family: Georgia, Times, serif;
+    border-bottom: 1px solid #86c232;
+    margin-bottom: 1vw;
+
+}
+header p {
+    text-align: justify;
+    margin-top: 15px;
+}
+button {
+    font-size: 10px;
+    padding: 0;
+    border-width: 0;
+    margin-top: 0;
+
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    line-height: 4vw;
+   
+}
+main h2 {
+    font-weight: bold;
+    width: 33%;
+    margin: 0 1%;
+    background-color: #86c232;
+    padding-bottom: 0;
+}
+#skills ul ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 95%;
+}
+#skills ul ul li{
+    font-size: 3vw;
+    width: 50%;
+    margin-bottom: 1.5vw;
+    /* indent the second line when skill is two lines long */
+    /* padding-left: 6px;
+    text-indent: -6px; */
+}
+section ul li p:last-of-type{
+    margin-bottom: 3vw;
+    font-size: 2.7vw;
+}
+section ul li:nth-of-type(2n){
+    margin-bottom: 3vw;
+    font-size: 2.7vw;
+}
+a {
+    font-size: 1.8vw;
+}
+
+ul {
+    margin-right: 8%;
+    margin-left: 35%;
+    width: 65%
+}
+
+/* @media (min-width: 1000px){
+
+    header {
+        height: 25%;
+    }
+    main {
+        height: 65%;
+    }
+    footer {
+        height: 10%;
+    }
+    h1 {
+        font-size: 4vw;
+    }
+    h2 {
+        font-size: 3vw;
+    }
+    h3 {
+        font-size: 2vw;
+    }
+    p {
+        font-size: 1vw;
+    }
+    #date {
+        font-size: .75vw;
+    }
+} */
