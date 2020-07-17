@@ -8,7 +8,9 @@ document.querySelector("#contact").addEventListener("click", () =>{
     const cancel = document.querySelector("#cancel");
     const inputs = document.querySelectorAll("input");
     let errors = [];
-    console.log (unProfWords);
+    cancel.addEventListener("click", () =>{
+        document.querySelector("#modal").style.display="none";
+    })
     clear.addEventListener("click", () => {
         event.preventDefault();
         for (input of inputs){
@@ -28,20 +30,37 @@ document.querySelector("#contact").addEventListener("click", () =>{
                 console.log(input)
                 if (input.indexOf(word) > -1)
                 {
-                    console.log("are you broken here?")
                     errors.push(word);
-                    console.log(errors);
+                    errorHandling(word)
                 }
             }  
         }
     })
 
     function errorHandling(errorId){
-        console.log(errorId)
         errorId = "'#" + errorId +"'";
-        // let test = document.querySelector(errorId)
+        // Create element (show element?)
         
 
     }
-    errorHandling(name);
+    errorHandling("name");
+})
+document.querySelector(".moreTech").addEventListener("click", () => {
+    event.preventDefault();
+    skillsFullList = document.querySelectorAll("#skills .desktopView");
+    for (skill of skillsFullList){
+        if (skill.style.display != "flex"){
+            skill.style.display = "flex"
+        }
+        else {
+            skill.style.display= "none"
+        }
+    }
+    if (document.querySelector("#skills a").innerHTML != "(less...)"){
+        document.querySelector("#skills a").innerHTML = "(less...)"
+    }
+    else {
+        document.querySelector("#skills a").innerHTML = "(more...)"
+    }
+    
 })
