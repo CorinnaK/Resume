@@ -2,7 +2,7 @@
 document.querySelector("#contact").addEventListener("click", () =>{
     document.querySelector("#modal").style.display="flex";
     // console.log("hey");
-    const unProfWords = ["hello", "are", "bad", "test"];
+    const unProfWords = ["feldercarb", "frack", "skinjob", "vulgacarb"];
     const clear = document.querySelector("#clear");
     const submit = document.querySelector("#submit");
     const cancel = document.querySelector("#cancel");
@@ -39,6 +39,7 @@ document.querySelector("#contact").addEventListener("click", () =>{
                 errors.push("Please fill out the " + input.id + " field.")
             }
             input = input.value;
+            input  = input.toLowerCase();
             for (word of unProfWords){
                 if (input.indexOf(word) > -1){
                     // **ToDo add functionality to highlight unProf word in input** 
@@ -52,6 +53,8 @@ document.querySelector("#contact").addEventListener("click", () =>{
         if (textarea.value.indexOf(word) > -1){
                     errors.push(word + " is an unprofessional word. Please replace this word with something more appropriate")
         }
+        // Citation starts
+        // 
         if (errors.length == 0){
             if (listErrorClass.classList != "noErrors"){
                 listErrorClass.classList.add("noErrors")
