@@ -23,44 +23,59 @@ document.querySelector("#contact").addEventListener("click", () =>{
 
     submit.addEventListener("click", () =>{
         event.preventDefault();
+        const listErrorClass = document.querySelector("form ul");
+        // Citation Starts
+        // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+        // This is a function to loop through all the childern of the error elements list
+        // It first checks to make sure there is a child and then removes the last child in the list
+        let errorsPresent = listErrorClass.querySelectorAll("li");
+        for (listItems of errorsPresent){
+            listItems.remove();
+        }
+        
         for (input of inputs)
         {
             if (input.value.length == 0){
                 errors.push("Please fill out the " + input.id + " field.")
             }
             input = input.value;
-            for (word of unProfWords)
-            {
-                if (input.indexOf(word) > -1)
-                {
+            for (word of unProfWords){
+                if (input.indexOf(word) > -1){
                     // **ToDo add functionality to highlight unProf word in input** 
                     errors.push(word + " is an unprofessional word, please change this word.");
                 }
             } 
         }
-        if (textarea.value.length == 0)
-        {
+        if (textarea.value.length == 0){
             errors.push("Please fill out the message field.")
         }
-        if (textarea.value.indexOf(word) > -1)
-                {
+        if (textarea.value.indexOf(word) > -1){
                     errors.push(word + " is an unprofessional word. Please replace this word with something more appropriate")
-                }
+        }
         if (errors.length == 0){
-            console.log("no errors")
+            if (listErrorClass.classList != "noErrors"){
+                listErrorClass.classList.add("noErrors")
+                listErrorClass.classList.remove("errors");
+                console.log("no errors")
+            }
         }
         else
         {
-            
-            for (error of errors)
-            {
+            for (error of errors){
                 let newError = document.createElement("li");
+                console.log(newError)
                 newError.innerText = error;
-                newError.appendChild(document.querySelector(".error"))
-                console.log (error);
-            }
+                console.log(newError.innerText)
+                listErrorClass.appendChild(newError)
+                console.log(listErrorClass)
+                if (listErrorClass.classList != "errors"){
+                    listErrorClass.classList.add("errors");
+                    listErrorClass.classList.remove("noErrors");
+                }
+            console.log (error);
+            errors = [];
         }
-       
+        }
     })
 })
 //     function checkForErrors (word){
