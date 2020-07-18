@@ -50,11 +50,16 @@ document.querySelector("#contact").addEventListener("click", () =>{
         if (textarea.value.length == 0){
             errors.push("Please fill out the message field.")
         }
-        if (textarea.value.indexOf(word) > -1){
-                    errors.push(word + " is an unprofessional word. Please replace this word with something more appropriate")
+        for (word of unProfWords){
+            if (textarea.value.indexOf(word) > -1){
+                        console.log("This is working here!")
+                        errors.push(word + " is an unprofessional word. Please replace this word with something more appropriate")
+            }     
         }
         // Citation starts
-        // 
+        // https://github.com/TECHCareers-by-Manpower/js-practice
+        // Followed the example in the JS Practice Shopping List for adding and removing classes
+        // Syntax element.classList.add(class)
         if (errors.length == 0){
             if (listErrorClass.classList != "noErrors"){
                 listErrorClass.classList.add("noErrors")
@@ -77,21 +82,18 @@ document.querySelector("#contact").addEventListener("click", () =>{
                 }
             console.log (error);
             errors = [];
+            }
         }
-        }
+        // End Citation
     })
 })
-//     function checkForErrors (word){
-//         errorId = "'#" + errorId +"'";
-//         // Create element (show element?)
-//     }
-//     errorHandling("name");
-// })
 
 // function redirect()
 // {
 //     window.location.href = "mailto:mail@example.org";
 // }
+
+
 // funtion something()
 // {
 //     event.preventDefault();
