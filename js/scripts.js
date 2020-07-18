@@ -1,7 +1,7 @@
 
 document.querySelector("#contact").addEventListener("click", () =>{
-    document.querySelector("#modal").style.display="flex";
-    // console.log("hey");
+    document.querySelector(".form").classList.remove("hiddenForm");
+    document.querySelector(".form").classList.remove("displayForm");
     const unProfWords = ["feldercarb", "frack", "skinjob", "vulgacarb"];
     const clear = document.querySelector("#clear");
     const submit = document.querySelector("#submit");
@@ -11,7 +11,8 @@ document.querySelector("#contact").addEventListener("click", () =>{
     let errors = [];
     cancel.addEventListener("click", () =>{
         event.preventDefault();
-        document.querySelector("#modal").style.display="none";
+        document.querySelector(".form").classList.add("hiddenForm");
+        document.querySelector(".form").classList.remove("displayForm")
     })
     clear.addEventListener("click", () => {
         event.preventDefault();
@@ -24,10 +25,8 @@ document.querySelector("#contact").addEventListener("click", () =>{
     submit.addEventListener("click", () =>{
         event.preventDefault();
         const listErrorClass = document.querySelector("form ul");
-        // Citation Starts
-        // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
-        // This is a function to loop through all the childern of the error elements list
-        // It first checks to make sure there is a child and then removes the last child in the list
+        // Reference: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+        // Changed ideas from looping over childern to looping over the list items and removing the actual li
         let errorsPresent = listErrorClass.querySelectorAll("li");
         for (listItems of errorsPresent){
             listItems.remove();
@@ -35,52 +34,72 @@ document.querySelector("#contact").addEventListener("click", () =>{
         
         for (input of inputs)
         {
+            input.classList.remove("errors");
+            // Validate the email field if sending the form information directly
+            // Not neccessary when using mailto
+            // if (input.type == "email"){
+            //     // Citation Begins
+            //     // https://stackoverflow.com/questions/22276741/ 
+            //     // Email Validation (very rudimentary)
+            //     // First check if there are at least 3 character before the @
+            //     // Then check if the . is at least 3 character after the @ 
+            //     // And finally check if the . is 2 characters less that the length
+            //     if (input.value.indexOf("@") < 3 
+            //         || (input.value.indexOf(".") < (input.value.indexOf("@")+3)) 
+            //         || ((input.value.lastIndexOf(".") + 3)  > (input.value.length))
+            //         ) {
+            //         errors.push("Please enter a valid email address")
+            //     }
+            //     // End Citation
+            //}
+
             if (input.value.length == 0){
                 errors.push("Please fill out the " + input.id + " field.")
             }
+            inputid = input;
             input = input.value;
             input  = input.toLowerCase();
             for (word of unProfWords){
                 if (input.indexOf(word) > -1){
                     // **ToDo add functionality to highlight unProf word in input** 
-                    errors.push(word + " is an unprofessional word, please change this word.");
-                }
-            } 
-        }
+                    errors.push("-- " + word + "-- is an unprofessional word. Please replace it with something more appropriate.");
+                    inputid.classList.add("errors");
+                }     
+            }
+        }    
         if (textarea.value.length == 0){
-            errors.push("Please fill out the message field.")
+            errors.push("Please fill out the message field.");
         }
+        textarea.classList.remove("errors");
         for (word of unProfWords){
-            if (textarea.value.indexOf(word) > -1){
-                        console.log("This is working here!")
-                        errors.push(word + " is an unprofessional word. Please replace this word with something more appropriate")
+            textareaWords = textarea.value;
+            textareaWords = textareaWords.toLowerCase();
+            if (textareaWords.indexOf(word) > -1){
+                errors.push("-- " + word + "--  is an unprofessional word. Please replace it with something more appropriate")
+                textarea.classList.add("errors")
             }     
         }
         // Citation starts
         // https://github.com/TECHCareers-by-Manpower/js-practice
         // Followed the example in the JS Practice Shopping List for adding and removing classes
-        // Syntax element.classList.add(class)
+        // Syntax element.classList.add/remove(class)
         if (errors.length == 0){
             if (listErrorClass.classList != "noErrors"){
                 listErrorClass.classList.add("noErrors")
                 listErrorClass.classList.remove("errors");
-                console.log("no errors")
             }
+            redirect();
         }
         else
         {
             for (error of errors){
                 let newError = document.createElement("li");
-                console.log(newError)
                 newError.innerText = error;
-                console.log(newError.innerText)
                 listErrorClass.appendChild(newError)
-                console.log(listErrorClass)
                 if (listErrorClass.classList != "errors"){
                     listErrorClass.classList.add("errors");
                     listErrorClass.classList.remove("noErrors");
                 }
-            console.log (error);
             errors = [];
             }
         }
@@ -88,10 +107,12 @@ document.querySelector("#contact").addEventListener("click", () =>{
     })
 })
 
-// function redirect()
-// {
-//     window.location.href = "mailto:mail@example.org";
-// }
+function redirect()
+{
+    // https://stackoverflow.com/questions/15019689
+    // How to add line breaks into body of mail
+    window.location.href = "mailto:husker@galaxyhit.com?&subject=" + document.querySelector("#subject").value +"&body=" + document.querySelector("#message").value +"%0D%0A%0D%0ASent from " + document.querySelector("#name").value;
+}
 
 
 // funtion something()

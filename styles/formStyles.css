@@ -1,6 +1,11 @@
 
-#modal {
-    display:none;
+.hiddenForm {
+    display: none;
+}
+.displayForm {
+    display: unset;
+}
+/* #modal {
     position: fixed;
     z-index:1;
     top: 0;
@@ -9,7 +14,7 @@
     width: 100%;
     overflow: auto;
     background-color: rgba(150, 150, 150, .7);
-}
+} */
 form {
 
     left: 25%;
@@ -18,24 +23,31 @@ form {
     overflow: auto;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
     background-color: #444444;
     color: #F0f0f0;
-    padding: 2% 1%;
-    border-radius: 10%;
+    padding-top: 2%;
+    /* border-radius: 10%; */
     margin: auto;
     /* margin: 20px 0 0 50px; */
+}
+form input, form label{
+    padding-left: 2%;
+    line-height: 1.2rem;
+    font-size: 1.2rem;
 }
 .formBtn {
     width: 80px;
     border: 1px solid #000;
     background-color: #86c232;
-    height: 40px;
-    border-radius: 25%;
- 
+    height: 40px; 
+}
+.btnPanel {
+    display: flex;
+    justify-content: space-between;
 }
 button:hover {
-    background-color: rgb(150, 150, 150);
+    background-color: #969696;
     color: #F0f0f0;
 }
 .noErrors {
@@ -43,6 +55,14 @@ button:hover {
 }
 .errors {
     display: unset;
-    background-color: white;
-    color: red;
+    background-color: #ffffff;
+    color: rgb(156, 58, 58);
+    margin-left: 0;
+
+}
+.errors ul li{
+    border-bottom: .5px solid black;
+    background-color: #f5f5dc;
+    width: 100%;
+    
 }

@@ -57,17 +57,27 @@ h2 {
     text-transform: uppercase;
     font-family: Georgia, Times, serif;
 }
+main h2 {
+    font-weight: bold;
+    width: 37%;
+    padding-left: 1%;
+    background-color: #86c232;
+    padding-bottom: 0;
+}
 h3 {
     font-size: 1.2rem;
-
+    
     padding-bottom: 0.5vw;
     font-family: Georgia, Times, serif;
 }
 main h3 {
-
+    
     font-weight: bold;
     border-bottom: 1px solid #86c232;
     margin-bottom: 1vw;
+}
+h4 {
+    width: 75%;
 }
 header p {
     text-align: justify;
@@ -85,13 +95,6 @@ p{
     font-family:  Helvetica, sans-serif;
     font-size: .8rem;
     line-height: 4vw;
-}
-main h2 {
-    font-weight: bold;
-    width: 37%;
-    padding-left: 1%;
-    background-color: #86c232;
-    padding-bottom: 0;
 }
 ul {
     margin-right: 8%;
@@ -112,9 +115,6 @@ ul {
 .twoColumn li{
     width: 80%;
     line-height: 1.2rem;
-}
-h4 {
-    width: 75%;
 }
 a {
     font-size: .7rem;
@@ -203,6 +203,9 @@ footer a:hover {
     }
     #skills {
         order: 1;
+    }
+    #contactForm {
+        order: 2;
     }
     h3 {
         margin-top: 1.3rem;
