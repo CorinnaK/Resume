@@ -107,7 +107,7 @@ ul {
 }
 .fourColumn li {
     width: 50%; 
-} */
+}
 
 .twoColumn li{
     width: 80%;
@@ -119,10 +119,17 @@ h4 {
 a {
     font-size: .7rem;
 }
-
+footer a:visited {
+    background-color: #86c232;
+}
+footer a:hover {
+    background-color: #F0F0F0;
+    color: #86c232;
+}
 .desktopView {
     display: none;
 }
+
 @media (min-width:600px) and (max-width: 991px){
 
 }

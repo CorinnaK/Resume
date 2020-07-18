@@ -34,3 +34,13 @@ form {
     border-radius: 25%;
  
 }
+button:hover {
+    background-color: rgb(150, 150, 150);
+    color: #F0f0f0;
+}
+.noErrors {
+    display: none;
+}
+.errors {
+    display: unset;
+}
