@@ -62,7 +62,7 @@ document.querySelector("#contact").addEventListener("click", () =>{
             for (word of unProfWords){
                 if (input.indexOf(word) > -1){
                     // **ToDo add functionality to highlight unProf word in input** 
-                    errors.push("-- " + word + "-- is an unprofessional word. Please replace it with something more appropriate.");
+                    errors.push("* " + word + "* is an unprofessional word. Please replace it with something more appropriate.");
                     inputid.classList.add("errors");
                 }     
             }
@@ -75,7 +75,7 @@ document.querySelector("#contact").addEventListener("click", () =>{
             textareaWords = textarea.value;
             textareaWords = textareaWords.toLowerCase();
             if (textareaWords.indexOf(word) > -1){
-                errors.push("-- " + word + "--  is an unprofessional word. Please replace it with something more appropriate")
+                errors.push("*" + word + "*  is an unprofessional word. Please replace it with something more appropriate")
                 textarea.classList.add("errors")
             }     
         }

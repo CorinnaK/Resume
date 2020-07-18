@@ -3,7 +3,7 @@ html {
     font-size: 3.2vw;
 }
 body {
-    color: rgb(200, 200, 200);
+    color: #c8c8c8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@ body {
     https://thirtyeightvisuals.com/blog/half-background-squarespace-index
     This code block uses the linear gradient option in the background to set a change in the background color (direction, color-1  size, color-2 size)  the size could be omitted and the color would gradually change.
     I wanted an abrupt change so I set the size at 50% */
-    background: linear-gradient(180deg, #373737 50%, rgb(100, 100, 100) 50%);
+    background: linear-gradient(180deg, #373737 50%, #646464 50%);
     /* Citation ends */
     background-repeat: no-repeat;
     font-family: Helvetica, sans-serif;
@@ -33,8 +33,8 @@ header h2 {
     font-size: 1.5rem;
 }
 main {
-    background-color: rgb(240, 240, 240);
-    color: rgb(55, 55, 55);
+    background-color: #f0f0f0;
+    color: #373737;
     width: 90%;
     margin-top: 20px;
     display: flex;
@@ -129,6 +129,12 @@ footer a:hover {
 .desktopView {
     display: none;
 }
+#skills {
+    order: 1;
+}
+#contactForm {
+    order: 2;
+}
 
 @media (min-width:600px) and (max-width: 991px){
 
@@ -201,12 +207,7 @@ footer a:hover {
     header p {
         padding: 0 1.5%;
     }
-    #skills {
-        order: 1;
-    }
-    #contactForm {
-        order: 2;
-    }
+
     h3 {
         margin-top: 1.3rem;
     }

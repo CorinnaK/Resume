@@ -3,51 +3,46 @@
     display: none;
 }
 .displayForm {
-    display: unset;
+    display: flex;
 }
-/* #modal {
-    position: fixed;
-    z-index:1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(150, 150, 150, .7);
-} */
-form {
 
-    left: 25%;
-    top: 25%;
-    height: 50%;
-    overflow: auto;
+form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #444444;
-    color: #F0f0f0;
-    padding-top: 2%;
-    /* border-radius: 10%; */
+    background-color: #c8c8c8;
     margin: auto;
-    /* margin: 20px 0 0 50px; */
 }
-form input, form label{
-    padding-left: 2%;
+form input, textarea, form label{
+    padding-left: 0%;
     line-height: 1.2rem;
+    font-size: 1rem;
+    border: 0;
+    font-family: Helvetica, sans-serif;
+    font-weight: unset;
+    font-size: 1rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+form label {
     font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Georgia, Times, serif;
 }
 .formBtn {
     width: 80px;
-    border: 1px solid #000;
+    border: 1px solid #646464;
     background-color: #86c232;
     height: 40px; 
+    margin: .1rem;
 }
 .btnPanel {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
+    background-color: #c8c8c8;
 }
 button:hover {
-    background-color: #969696;
+    background-color: #646464;
     color: #F0f0f0;
 }
 .noErrors {
@@ -61,8 +56,29 @@ button:hover {
 
 }
 .errors ul li{
-    border-bottom: .5px solid black;
+    border-bottom: .5px solid #646464;
     background-color: #f5f5dc;
+    width: 100%;  
+    margin: 0 .1rem;
+}
+.form ul li ul {
     width: 100%;
-    
+}
+@media (min-width: 100px){
+    .formBtn {
+        font-size: 1.2rem;
+    }
+    form, .btnPanel{
+        background-color: #f0f0f0;
+       
+    }
+    form label {
+        border-bottom: 1px solid #86c232;
+    }
+    .btnPanel {
+        margin: .5%;
+    }
+    .errPanel{
+        border-top: 1px solid #86c232;
+    }
 }
