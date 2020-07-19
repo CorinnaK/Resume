@@ -3,7 +3,7 @@
     display: none;
 }
 .displayForm {
-    display: flex;
+    display: unset;
 }
 
 form {

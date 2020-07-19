@@ -2,24 +2,38 @@
 <html lang="en">
 
 <head>
-    <title>Corinna Kelly</title>
+    <title>Resume of Corinna Kelly</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Corinna Kelly">
+    <meta name="description" content="Resume of Corinna Kelly Software Developer">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="styles/formStyles.css">
-    <script src="js/scripts.js"  defer></script>    
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
-    
+
     <header>
-        <h1>CORINNA KELLY</h1>
-        <h2> SOFTWARE DEVELOPER</h2>
-        <h3>PROFILE SUMMARY</h3>
-        <p> Currently undergoing a career shift to software development. With over a decade experience as a manager in the security industry I bring with me demonstrated skills in team leadership, conflict management, and effective investigative skills. Attention to detail and steadfast determination are among my top stregths.
-        </p>
+        <section id="header">
+            <h1>CORINNA KELLY</h1>
+            <h2> SOFTWARE DEVELOPER</h2>
+            <h3>PROFILE SUMMARY</h3>
+            <p>
+                Currently undergoing a career shift to software development. With over a decade experience as a manager
+                in the security industry I bring with me demonstrated skills in team leadership, conflict management,
+                and effective investigative skills. Attention to detail and steadfast determination are among my top
+                stregths.
+            </p>
+            <ul class="iconLinks">
+                <li><a class="contact" href="#contactForm"><img src="images/004-email.png"
+                            alt="Email Icon - contact me"></a></li>
+                <li><a href="https://github.com/CorinnaK" target="._blank"><img src="images/001-github-sign.png"
+                            alt="GitHub Logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/corinna-kelly-a4a3ba2b/" target="_blank"><img
+                            src="images/002-linkedin.png" alt="LinkedIn"></a></li>
+            </ul>
+        </section>
     </header>
     <main>
         <section id="eductaion">
@@ -28,13 +42,13 @@
                 <li>
                     <h3 class="mobileView">UofA Tech Center<a href="#" class="mobileView more">(more...)</a></h3>
                     <h3 class="desktopView">University of Alberta Tech Center</h3>
-                    <h4>TechCareers Full Stack 
-                    Application Developer</h4>
+                    <h4>TechCareers Full Stack
+                        Application Developer</h4>
                     <p id="date">Jun 2020 - Oct 2020</p>
-                    <ul class="desktopView oneColumn">
+                    <ul class="desktopView moreInfo oneColumn">
                         <li> Rapid Application Development </li>
                         <li> Object-oriented programming </li>
-                        <li> Database Concepts and development  </li>
+                        <li> Database Concepts and development </li>
                         <li> Project management concepts </li>
                         <li> Presentation and soft skills training </li>
                     </ul>
@@ -42,9 +56,9 @@
                 <li>
                     <h3>MacEwan University<a href="#" class="mobileView more">(more...)</a></h3>
                     <h4>Police and Security Program
-                    Major in Investigations</h4>
+                        Major in Investigations</h4>
                     <p class="date">Sep 2003 - Jun 2005</p>
-                    <ul class="desktopView oneColumn">
+                    <ul class="desktopView moreInfo oneColumn">
                         <li>Emergency and risk management </li>
                         <li>Loss Prevention </li>
                         <li>Investigative techniques </li>
@@ -61,22 +75,22 @@
             <h2>Skills</h2>
             <ul>
                 <li>
-                    <h3>Technical <a href="#" class="mobileView more">(more...)</a></h3>
-                    <ul class= "fourColumn" id="doubleList">
+                    <h3>Technical <a href="#" class="mobileView moreSkill">(more...)</a></h3>
+                    <ul class="fourColumn" id="doubleList">
                         <li>C#</li>
                         <li>Git</li>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Python</li>
                         <li>Javasript</li>
-                        <li class="desktopView">React</li>
-                        <li class="desktopView">Redux</li>
-                        <li class="desktopView">PHP</li>
-                        <li class="desktopView">Flask</li>
-                        <li class="desktopView">SQL</li>
-                        <li class="desktopView">Axios</li>
-                        <li class="desktopView">.NET Core</li>
-                        <li class="desktopView">WordPress</li>
+                        <li class="desktopView moreInfo">React</li>
+                        <li class="desktopView moreInfo">Redux</li>
+                        <li class="desktopView moreInfo">PHP</li>
+                        <li class="desktopView moreInfo">Flask</li>
+                        <li class="desktopView moreInfo">SQL</li>
+                        <li class="desktopView moreInfo">Axios</li>
+                        <li class="desktopView moreInfo">.NET Core</li>
+                        <li class="desktopView moreInfo">WordPress</li>
 
                     </ul>
                 </li>
@@ -88,7 +102,7 @@
                         <li>Access Control Systems</li>
                         <li>Policy/Procedure Writing</li>
                         <li class="desktopView">Scheduling and Payroll</li>
-                        <li class="desktopView">Team Management and Training</li>     
+                        <li class="desktopView">Team Management and Training</li>
                     </ul>
                 </li>
             </ul>
@@ -115,44 +129,45 @@
                 </li>
             </ul>
         </section>
-        <section id = "contactForm" class="form hiddenForm">
+        <section id="contactForm" class="form hiddenForm">
             <h2>Contact Me</h2>
-        <ul>
-            <li>
-                <form action="POST">
-                    <label for="name">Name: </label>
-                
-                    
-                    <input type="text" name="name" id="name"  required>
-                    <!-- **Add the following lines if you are sending directly from the form. 
+            <ul>
+                <li>
+                    <form action="POST">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" required>
+                        <!-- **Add the following lines if you are sending directly from the form. 
                     Sender email is not neccessay if using mailto as it is included by their mail client*** 
                     <label for="email">Email Address: </label> 
                     <input type="email" name="email" id="email" placeholder="someone@somecompany.com">-->
-                    <label for="subject">Subject: </label>
-                    <input type="text" name="subject" id="subject"  required>
-                    <label for="message">Message: </label>
-                    <textarea name="message" id="message" cols="30" rows="10" ></textarea>
-                    <ul class="noErrors errPanel"></ul>
-                    <div class="btnPanel">
-                        <button class="formBtn" id="clear">Clear</button>
-                        <button class="formBtn" id="submit">Submit</button>
-                        <button class="formBtn" id="cancel">Cancel</button>
-                    </div>
-                
-                </form>
-        
-            </li>
-        </ul>    
+                        <label for="subject">Subject: </label>
+                        <input type="text" name="subject" id="subject" required>
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <ul class="noErrors errPanel"></ul>
+                        <div class="btnPanel">
+                            <button class="formBtn" id="clear">Clear</button>
+                            <button class="formBtn" id="submit">Submit</button>
+                            <button class="formBtn" id="cancel">Cancel</button>
+                        </div>
+
+                    </form>
+
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><button class="mainBtn" id="contact">Let's Talk Oppurtunity</button></li>
-                <li><a href="https://github.com/CorinnaK" target="_blank">GitHub</a></li>
-                <li></li>
-            </ul>
-        </nav>
+        <button class="footerBtn contact">CONTACT</button>
+        <ul class="iconLinks">
+            <li><a class="contact" href="#contactForm"><img src="images/004-email.png"
+                        alt="Email Icon - contact me"></a></li>
+            <li><a href="https://github.com/CorinnaK" target="._blank"><img src="images/001-github-sign.png"
+                        alt="GitHub Logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/corinna-kelly-a4a3ba2b/" target="_blank"><img
+                        src="images/002-linkedin.png" alt="LinkedIn"></a></li>
+        </ul>
+
     </footer>
 </body>
 
