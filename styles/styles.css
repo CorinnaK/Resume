@@ -1,6 +1,8 @@
 html {
     box-sizing: border-box;
     font-size: 3.2vw;
+    /* height: 100%; */
+    
 }
 body {
     color: #c8c8c8;
@@ -131,12 +133,7 @@ footer a:hover {
     background-color: #F0F0F0;
     color: #86c232;
 }
-.desktopView {
-    display: none;
-}
-.desktopView .lessInfo {
-    display: unset
-}
+
 #skills {
     order: 1;
 }
@@ -165,8 +162,20 @@ img {
     margin: 0;
     width: 100%;
 }
-
+.desktopView {
+    display: none;
+}
+.moreInfo {
+    display:flex;
+}
 @media (min-width:600px) and (max-width: 991px){
+    html {
+        font-size: 2vw;
+        height: 100%;
+    }
+    body {
+        height: 100%
+    }
 
 }
 @media (min-width: 992px){
@@ -175,9 +184,7 @@ img {
         background-color: #f0f0f0;
     }
     body {
-        width: 100%;
         max-width: 1250px;
-        height: 100%;
         margin-left: auto;
         margin-right: auto;
         margin: 1% auto;
@@ -191,7 +198,7 @@ img {
         display: flex;
     }
     .oneColumn {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         margin: 0 0 1.2rem 0;
         line-height: 1.3rem;
