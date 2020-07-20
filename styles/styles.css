@@ -41,7 +41,7 @@ main {
     background-color: #f0f0f0;
     color: #373737;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;  
 }
@@ -132,12 +132,16 @@ ul {
 a {
     font-size: .7rem;
 }
-
 footer {
+    width: 90%;
+}
+.footerSocialLink {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+}
 
+.credit {
+    text-align: right;
 }
 
 footer a:visited {
@@ -164,9 +168,17 @@ footer a:hover {
     text-align: center;
     color: #373737;
     height:50%;
-    padding: 0 1%;
-    
+    width: auto;
+    padding: 0 1%; 
 } 
+.credit {
+    color: #c8c8c8;
+    font-size: .8rem;
+}
+
+.credit a {
+    color: #c8c8c8
+}
 
 img {
     width: 2.2rem;
