@@ -200,8 +200,8 @@ img {
     display: none;
 }
 
-.moreInfo {
-    display:flex;
+.more {
+    display:none;
 }
 
 @media (min-width:600px) and (max-width: 991px){
