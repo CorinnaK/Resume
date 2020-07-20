@@ -2,6 +2,7 @@
 .hiddenForm {
     display: none;
 }
+
 .displayForm {
     display: unset;
 }
@@ -13,6 +14,7 @@ form {
     background-color: #c8c8c8;
     margin: auto;
 }
+
 form input, textarea, form label{
     padding-left: 0%;
     line-height: 1.2rem;
@@ -24,11 +26,13 @@ form input, textarea, form label{
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 form label {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: Georgia, Times, serif;
 }
+
 .formBtn {
     width: 80px;
     border: 1px solid #646464;
@@ -36,18 +40,22 @@ form label {
     height: 40px; 
     margin: .1rem;
 }
+
 .btnPanel {
     display: flex;
     justify-content:flex-end;
     background-color: #c8c8c8;
 }
+
 button:hover {
     background-color: #646464;
     color: #F0f0f0;
 }
+
 .noErrors {
     display: none;
 }
+
 .errors {
     display: unset;
     background-color: #ffffff;
@@ -55,29 +63,35 @@ button:hover {
     margin-left: 0;
 
 }
+
 .errors ul li{
     border-bottom: .5px solid #646464;
     background-color: #f5f5dc;
     width: 100%;  
     margin: 0 .1rem;
 }
+
 .form ul li ul {
     width: 100%;
 }
+
 @media (min-width: 100px){
     .formBtn {
         font-size: 1.2rem;
     }
+
     form, .btnPanel{
-        background-color: #f0f0f0;
-       
+        background-color: #f0f0f0; 
     }
+
     form label {
         border-bottom: 1px solid #86c232;
     }
+
     .btnPanel {
         margin: .5%;
     }
+    
     .errPanel{
         border-top: 1px solid #86c232;
     }

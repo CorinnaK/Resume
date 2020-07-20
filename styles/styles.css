@@ -1,9 +1,8 @@
 html {
     box-sizing: border-box;
-    font-size: 3.2vw;
-    /* height: 100%; */
-    
+    font-size: 3.2vw;    
 }
+
 body {
     color: #c8c8c8;
     display: flex;
@@ -20,21 +19,24 @@ body {
     background-repeat: no-repeat;
     font-family: Helvetica, sans-serif;
 }
+
 header {
     text-align: center;
-    /* height: 25%; */
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
 }
+
 header>*{
     margin:20px 5% 0 5%;
 }
+
 header h2 {
     border-bottom: 1px solid #86c232 ;
     padding-bottom: 10px;
     font-size: 1.5rem;
 }
+
 main {
     background-color: #f0f0f0;
     color: #373737;
@@ -45,19 +47,19 @@ main {
 }
 
 
-
-/* Typography */
 h1 {
     font-size: 2.75rem;
     font-weight: bold;
     font-family: Georgia, Times, serif;
     margin-bottom: 10px;;
 }
+
 h2 {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-family: Georgia, Times, serif;
 }
+
 main h2 {
     font-weight: bold;
     width: 37%;
@@ -65,43 +67,51 @@ main h2 {
     background-color: #86c232;
     padding-bottom: 0;
 }
+
 h3 {
     font-size: 1.2rem;
     margin-top: 10px;
     padding-bottom: 0.5vw;
     font-family: Georgia, Times, serif;
 }
+
 main h3 {
     
     font-weight: bold;
     border-bottom: 1px solid #86c232;
     margin-bottom: 1vw;
 }
+
 h4 {
     width: 75%;
 }
+
 header p {
     text-align: justify;
     margin-top: 15px;
     line-height: 1.2rem;
     font-size: 1rem;
 }
+
 button {
     font-size: 10px;
     padding: 0;
     border-width: 0;
     margin-top: 0;
 }
+
 p{
     font-family:  Helvetica, sans-serif;
     font-size: .8rem;
     line-height: 4vw;
 }
+
 ul {
     margin-right: 8%;
     margin-left: 38%;
     width: 62%;
 }
+
 .fourColumn, .oneColumn, .twoColumn{
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +119,7 @@ ul {
     margin: 0;
     width: 95%;
 }
+
 .fourColumn li {
     width: 50%; 
 }
@@ -117,18 +128,22 @@ ul {
     width: 80%;
     line-height: 1.2rem;
 }
+
 a {
     font-size: .7rem;
 }
+
 footer {
     display: flex;
     justify-content: space-between;
     width: 90%;
 
 }
+
 footer a:visited {
     background-color: #86c232;
 }
+
 footer a:hover {
     background-color: #F0F0F0;
     color: #86c232;
@@ -137,9 +152,11 @@ footer a:hover {
 #skills {
     order: 1;
 }
+
 #contactForm {
     order: 2;
 }
+
 .footerBtn {
     background-color: #c8c8c8;
     border: 1px solid #000000;
@@ -150,115 +167,130 @@ footer a:hover {
     padding: 0 1%;
     
 } 
+
 img {
     width: 2.2rem;
     height: auto;
     background-color: #c8c8c8;
     border: 1px solid #000000;
 }
+
 .iconLinks {
     display: flex;
     justify-content: flex-end;
     margin: 0;
     width: 100%;
 }
+
 .desktopView {
     display: none;
 }
 .moreInfo {
     display:flex;
 }
+
 @media (min-width:600px) and (max-width: 991px){
     html {
         font-size: 2vw;
         height: 100%;
     }
+
     body {
         height: 100%
     }
-
 }
+
 @media (min-width: 992px){
     html{
         font-size: 16px;
         background-color: #f0f0f0;
     }
+
     body {
         max-width: 1250px;
         margin-left: auto;
         margin-right: auto;
         margin: 1% auto;
         border: 4px solid #373737;
-        
     }
+
     .mobileView {
         display: none;
     }
+
     .desktopView {
         display: flex;
     }
+
     .oneColumn {
-        /* display: flex; */
         flex-direction: column;
         margin: 0 0 1.2rem 0;
         line-height: 1.3rem;
     }
+
     .oneColumn li {
         width: 100%;
         margin-left: 3.85rem;
-   
     }
+
     .twoColumn {
         margin-bottom: 2.6rem;
     }
+
     .twoColumn li{
         width: 50%;
         line-height: 1.5rem;
     }
+
     .fourColumn li {
         width: 25%;
         line-height: 1.5rem;
-        /* margin-bottom: 1.3rem;; */
     }
+
     p{
         line-height: 1.3rem;
         margin-bottom: .3rem;
         font-size: .75rem;
     }
+
     section ul {
         margin-left: 30%;
         margin-right: 0;
         width: auto;
     }
+
     main h3 {
         width:auto;
     }
+
     main h2{
         line-height: 2.2rem;
         width: 28.5%;
         padding-left: 1.5%;
     }
+
     main section:first-of-type h2{
         margin-top: 0;
     }
+
     header p {
         padding: 0 1.5%;
     }
+
     h3 {
         margin-top: 1.3rem;
     }
-    .iconLinks {
 
+    .iconLinks {
         margin: 0;
-      
     }
     
     img {
         width: 3.5rem;
         margin: 4px 0 4px 2px;
         border-width: 2px;
-
     }
+
     .footerBtn {
         height: 1.5rem;
     } 
