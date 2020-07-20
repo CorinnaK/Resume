@@ -138,17 +138,3 @@ function Redirect()
     // How to add line breaks into body of mail
     window.location.href = "mailto:husker@galaxyhit.com?&subject=" + document.querySelector("#subject").value + "&body=" + document.querySelector("#message").value + "%0D%0A%0D%0ASent from " + document.querySelector("#name").value;
 }
-
-
-
-// let more = document.querySelectorAll(".more");
-// for (link of more){
-//     link.addEventListener("click", Something);
-// }
-// function Something (event){
-//     let moremore = event.target.parentElement;
-//     moremore = moremore.parentElement.querySelector(".moreInfo")
-//     moremore.classList.remove("moreInfo");
-//     moremore.classList.add("lessInfo")
-//     console.log(moremore);
-// }
