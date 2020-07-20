@@ -16,7 +16,7 @@ document.querySelectorAll(".contact").forEach(link => {
             event.preventDefault();
             // Toggle class to hide the form if the user clicks cancel
             document.querySelector(".form").classList.add("hiddenForm");
-            document.querySelector(".form").classList.remove("displayForm")
+            document.querySelector(".form").classList.remove("displayForm");
         })
 
         document.querySelector("#clear").addEventListener("click", () => {
@@ -45,7 +45,7 @@ document.querySelectorAll(".contact").forEach(link => {
                 input.classList.remove("errors");
                 // Use Validate email function here if sending form data directly using input as the argument
                 if (input.value.length == 0){
-                    errors.push("Please fill out the " + input.id + " field.")
+                    errors.push("Please fill out the " + input.id + " field.");
                 }
                 // Retain the input id to use for adding the error class back to the input id
                 inputid = input;
@@ -73,8 +73,8 @@ document.querySelectorAll(".contact").forEach(link => {
                 textareaWords = textarea.value;
                 textareaWords = textareaWords.toLowerCase();
                 if (textareaWords.indexOf(word) > -1){
-                    errors.push("*" + word + "*  is an unprofessional word. Please replace it with something more appropriate")
-                    textarea.classList.add("errors")
+                    errors.push("*" + word + "*  is an unprofessional word. Please replace it with something more appropriate");
+                    textarea.classList.add("errors");
                 }     
             }
             // Citation starts
@@ -96,7 +96,7 @@ document.querySelectorAll(".contact").forEach(link => {
                 for (error of errors){
                     let newError = document.createElement("li");
                     newError.innerText = error;
-                    listErrorClass.appendChild(newError)
+                    listErrorClass.appendChild(newError);
                     // Toggle class to errors if not already set  to errors
                     if (listErrorClass.classList != "errors"){
                         listErrorClass.classList.add("errors");
@@ -110,6 +110,8 @@ document.querySelectorAll(".contact").forEach(link => {
         })
     })
 })
+// Ensure user inputs a valid email address into a form. Takes the input as the argument and outputs an error message to the errors array.
+// A valid email for this functions is ***@***.**
 function ValidateEmail (input){
     // Validate the email field if sending the form information directly
     // Not neccessary when using mailto
@@ -124,18 +126,17 @@ function ValidateEmail (input){
             || (input.value.indexOf(".") < (input.value.indexOf("@")+3)) 
             || ((input.value.lastIndexOf(".") + 3)  > (input.value.length))
             ) {
-            errors.push("Please enter a valid email address")
+            errors.push("Please enter a valid email address");
         }
         // End Citation
     }
 }
-
 // Opens users mail client and pre-populates with inputted information
 function Redirect()
 {
     // https://stackoverflow.com/questions/15019689
     // How to add line breaks into body of mail
-    window.location.href = "mailto:husker@galaxyhit.com?&subject=" + document.querySelector("#subject").value +"&body=" + document.querySelector("#message").value +"%0D%0A%0D%0ASent from " + document.querySelector("#name").value;
+    window.location.href = "mailto:husker@galaxyhit.com?&subject=" + document.querySelector("#subject").value + "&body=" + document.querySelector("#message").value + "%0D%0A%0D%0ASent from " + document.querySelector("#name").value;
 }
 
 

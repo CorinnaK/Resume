@@ -47,6 +47,14 @@ form label {
     background-color: #c8c8c8;
 }
 
+#submit {
+    order: 1;
+}
+
+#cancel {
+    order: 2;
+}
+
 button:hover {
     background-color: #646464;
     color: #F0f0f0;
@@ -91,7 +99,7 @@ button:hover {
     .btnPanel {
         margin: .5%;
     }
-    
+
     .errPanel{
         border-top: 1px solid #86c232;
     }
