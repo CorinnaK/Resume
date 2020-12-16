@@ -3,7 +3,7 @@
 HTML resume of Corinna Kelly with contact form.
 
 Trello Link:
-https://trello.com/b/LaaKcYxa/html-resume-w-contact-form
+
 
 Citation Summary:
 
